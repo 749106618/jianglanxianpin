@@ -1,0 +1,25 @@
+/* pages/sales_qrcode/sales_qrcode.wxss */
+@import"../sales/sales.wxss";
+page{
+  text-align: center;
+}
+button{
+  background-color:rgb(255, 255, 255);
+  border-radius: 0rpx;
+  padding:0rpx;
+  margin:0rpx;
+  display: inline-block;
+  line-height: 1.5;
+  color: #666;
+  font-size: 28rpx;
+
+  }
+  
+  button::after{ /*button的边框样式是通过::after方式实现的*/
+  border:none;
+  }
+  
+  .button-hover{ /*点击后样式*/
+  color:#000;
+  background-color: rgb(247, 247, 247);
+  }

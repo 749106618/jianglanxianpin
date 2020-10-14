@@ -1,0 +1,111 @@
+<!--pages/user_index/user_index.wxml-->
+<view class="header">
+  <view class="h_top">
+    <view class="ht_img">
+      <!-- <image src="{{wxUserAvatarUrl}}" mode="widthFix"></image> -->
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="ht_user">
+      <!-- <text class="userName">{{wxUserName}}</text> -->
+      <open-data type='userNickName' lang="zh_CN"></open-data>
+      <!-- <view class="user">
+        <image src="../img/vip.jpg" mode="widthFix"></image>
+        <text> 普通会员</text>
+      </view> -->
+    </view>
+    <!-- <view class="ht_lv">等级介绍 ></view> -->
+  </view>
+  <!-- <view class="h_bot">
+    <view class="hb_left">
+      <view class="ul1">
+        <view class="li">1</view>
+        <view class="li">0</view>
+        <view class="li">0</view>
+        <view class="li">0</view>
+      </view>
+      <view class="ul2">
+        <view class="li">可用红包</view>
+        <view class="li">银行卡</view>
+        <view class="li">物流卷</view>
+        <view class="li">鲜豆</view>
+      </view>
+    </view>
+    <view class="hb_right">
+      <image src="../img/hb.jpg" mode="widthFix"></image>
+      <text>全部资产</text>
+      <view></view>
+    </view>
+  </view> -->
+</view>
+<!-- 订单 -->
+<view class="order">
+  <view class="oul1">
+    <view class="li" bindtap="junpOrder" data-type="unpaid" data-index='1'>
+      <image src="../img/order1.jpg" mode="widthFix" class="oImg1"></image>
+      <text wx:if='{{fundList.unpaid!=0}}'>{{fundList.unpaid}}</text>
+    </view>
+    <view class="li" bindtap="junpOrder" data-type="unshipped" data-index='2'>
+      <image src="../img/order2.jpg" mode="widthFix" class="oImg2"></image>
+      <text wx:if='{{fundList.unshipped!=0}}'>{{fundList.unshipped}}</text>
+    </view>
+    <view class="li" bindtap="junpOrder" data-type="shipped" data-index='3'>
+      <image src="../img/order3.jpg" mode="widthFix" class="oImg3"></image>
+      <text wx:if='{{fundList.shipped!=0}}'>{{fundList.shipped}}</text>
+    </view>
+    <view class="li" bindtap="junp" data-url='../sell/sell'>
+      <image src="../img/order4.jpg" mode="widthFix" class="oImg4"></image>
+    </view>
+    <view class="li" bindtap="junpOrder" data-type="all" data-index='0'>
+      <image src="../img/order5.jpg" mode="widthFix" class="oImg5"></image>
+    </view>
+  </view>
+  <view class="oul2">
+    <view class="li">待付款</view>
+    <view class="li">待发货</view>
+    <view class="li">配送中</view>
+    <view class="li">售后</view>
+    <view class="li">全部订单</view>
+  </view>
+</view>
+<!-- 广告 -->
+<image src="https://www.wjfresh.com/file/upload/20200113/1578887103454.jpg" mode="widthFix" class="gg"></image>
+<!-- 功能 -->
+<view class="gn">
+  <view>
+    <view class="gnli" bindtap="junp" data-url='../address/address'>
+      <image src="../img/ng4.png" mode="widthFix" class="gnImg4"></image>
+      <text>收货地址</text>
+    </view>
+    <view class="gnli" bindtap="createPoster">
+      <image src="../img/ng6.png" mode="widthFix" class="gnImg6"></image>
+      <text>客服与帮助</text>
+    </view>
+    <view class="gnli" bindtap="modalinput">
+      <image src="../img/ng7.png" mode="widthFix" class="gnImg7"></image>
+      <text>意见反馈</text>
+    </view>
+    <view class="gnli" bindtap="junp" data-url='../shopping_list/shopping_list'>
+      <image src="../img/user_1.png" mode="widthFix" class="gnImg8"></image>
+      <text>优惠券</text>
+    </view>
+    <view class="gnli" bindtap="junp" data-url='../text1/text1'>
+      <image src="../img/ng8.png" mode="widthFix" class="gnImg8"></image>
+      <text>关于我们</text>
+    </view>
+    <view class="gnli" wx:if='{{fundList.isSale}}' bindtap="junp" data-url='../sales/sales'>
+      <image src="../img/ng8.png" mode="widthFix" class="gnImg8"></image>
+      <text>我是业务员</text>
+    </view>
+  </view>
+  
+  <!-- <view class="gnli">
+      <image src="../img/ng1.png" mode="widthFix" class="gnImg1"></image>
+      <text>退出登录</text>
+    </view> -->
+  </view>
+  <view>
+</view>
+<!-- 吐槽模态框 -->
+<modal id="modal" hidden="{{hiddenmodalput}}" title="意见反馈" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <textarea placeholder="吐槽。。。" bindinput="conf"></textarea>
+</modal>

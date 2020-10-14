@@ -1,0 +1,9 @@
+<!--pages/get_phone/get_phone.wxml-->
+<image src="https://www.wjfresh.com/file/upload/20200414/1586844311644.png" mode="widthFix"></image>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信用户快速登陆</button>
+<text class="junplogon" bindtap="junplogon">手机号验证登录</text>
+<view class="junptext" bindtap="junptext">
+  <text>点击登录表明我同意</text>
+  <text class="text">果铺联采服务条款</text>
+</view>
+<!-- <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">绑定您的微信</button> -->

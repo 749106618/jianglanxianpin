@@ -1,0 +1,135 @@
+<!--pages/goods_details/goods_details.wxml-->
+<!-- 轮播 -->
+<swiper bindchange="changeSwiper" indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' current='{{current}}'>
+  <block wx:for='{{Goods.showImageUrl}}' wx:key="index">
+    <swiper-item>
+      <image src="{{imgHeader}}{{item}}" mode='widthFix'></image>
+    </swiper-item>
+  </block>
+  <!-- current 当前所在滑块的 index -->
+</swiper>
+<!-- 分享 -->
+<view class="swiper_posi po2"><image src="../img/god_2.png" mode="widthFix" bindtap="createPoster"></image></view>
+<!-- 当前图面/总数 -->
+<view class="swiper_posi1">{{index}} / {{Goods.showImageUrl.length}}</view>
+<!-- ---------------------------------------------- -->
+<!-- 商品内容 -->
+<view class="view1">
+  <view class="p1">
+    <text class="pText1">￥</text>
+    <text class="pText2">{{Goods.price}}</text>
+    <text class="pText1">/{{Goods.unit}}</text>
+  </view>
+  <view class="p2">{{Goods.goodsTitle}}</view>
+  <view class="pText3"> {{Goods.goodsDescribe}}</view>
+</view>
+<!-- 规格 -->
+<view class="view2">
+  <view class="v2Left">
+    <text>规格</text>
+  </view>
+  <view class="v2Right">
+    <view class="v2rView">{{Goods.unit}}/件</view>
+  </view>
+</view>
+
+<!-- 发货 数量 服务 -->
+<!-- <view class="view2">
+  <view class="v2Left">
+    <text>发货</text>
+    <text>数量</text>
+    <text>服务</text>
+  </view>
+  <view class="v2Right">
+    <view>
+      <text>长沙</text>
+      <image src="../img/god_3.png" mode="widthFix"></image>
+    </view>
+    <text>Goods.unit</text>
+    <text>商家直供，买手精选，一手货源</text>
+  </view>
+</view> -->
+<view class="bPjh1"></view>
+<!-- 推荐商品 -->
+<view class="dj">
+  <text class="djTit">推荐商品</text>
+  <view class="djw">
+    <view class="djx">
+      <view class="djshop" wx:for='{{Goodstj}}' wx:key='{{index}}' bindtap="reLoad" data-id="{{item.id}}">
+        <image class="djshopImg" src="{{imgHeader}}{{item.indexImg}}" mode="widthFix"></image>
+        <text class="djshopTit ov">{{item.goodsTitle}}</text>
+        <view class="djbot">
+          <text class="djbtxt1">￥</text>
+          <text class="djbtxt2">{{item.price}}</text>
+          <image class="djbadd" catchtap="addCard1" data-id="{{item.id}}" src="../img/god_.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bPjh1"></view>
+<!-- 富文本 -->
+<rich-text nodes="{{nodes}}"></rich-text>
+<view class="bPjh1"></view>
+<!-- 商品详情 -->
+<!-- <view class="details">
+  <view class="deTit">商品详情</view>
+  <view class="deLeft">
+    <view class="deLLeft">
+      <text>产地</text>
+      <text>皮重</text>
+      <text>不良率</text>
+      <text>开具发票</text>
+    </view>
+    <view class="deLRigh">
+      <text>长沙</text>
+      <text>0.2斤</text>
+      <text>7%</text>
+      <text>不支持</text>
+    </view>
+  </view>
+  <view class="deRigh">
+    <view class="deRLeft">
+      <text>毛重</text>
+      <text>外包装</text>
+      <text>允许误差</text>
+      <text>商品售后</text>
+    </view>
+    <view class="deRRigh">
+      <text>6.2斤</text>
+      <text>泡沫框</text>
+      <text>±0.2斤</text>
+      <text>不支持退货</text>
+    </view>
+  </view>
+</view> -->
+
+<!-- 底部导航 -->
+<view class="bottom"></view>
+<view class="flooter">
+  <view class="card" bindtap="junpCard">
+    <image src="../img/god_4.png" mode="widthFix"></image>
+    <text>{{cartNum}}</text>
+  </view>
+  <view class="fhui">
+    <view class="fhui1">
+      <image src="../img/god_-.png" mode="widthFix" catchtap="updNum" data-type="jian"></image>
+      <input type="number" maxlength="4" value="{{quantity}}" bindinput="updInput"></input>
+      <image src="../img/god_.png" mode="widthFix" catchtap="updNum" data-type="jia"></image>
+    </view>
+    <view class="addCard" bindtap="addCard" >加入购物车</view>
+  </view>
+</view>
+
+<view class="shareview" wx:if='{{shareview==true}}' bindtap="hideshareview">
+  <image src="{{shareImg}}" mode="widthFix" class="shareviewImg"></image>
+</view>
+<view class="centerView" wx:if='{{shareview==true}}'>
+  <view bindtap="saveImg">
+    <image src="../img/share_xia.png" mode="widthFix" class="shareImg"></image>
+    <button hover-class="none">下载图片</button>
+  </view>
+  <view>
+    <button open-type='share' hover-class="none"><image src="../img/share_wei.png" mode="widthFix" class="shareImg"></image>微信</button>
+  </view>
+</view>

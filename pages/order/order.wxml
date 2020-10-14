@@ -1,0 +1,42 @@
+<van-tabs animated sticky>
+    <van-tab title="标签 1">
+        <view class="card">
+            <view class="card-top">
+                <view class="card-top-left">
+                    <view>龙丰水果</view>
+                    <van-icon name="arrow" />
+                </view>
+                <view class="card-top-right">已收货</view>
+            </view>
+            <view class="miadd">订单号：19092767406051</view>
+            <view class="bottom">
+                <image class="img" src="/pages/img/vip.jpg" />
+                <view class="bottom-info">
+                    <view class="bottom-info-item">
+                        <view class="left">【直供】精选新西兰苹果</view>
+                        <view class="right">× 100</view>
+                    </view>
+                    <view class="bottom-info-item">
+                        <view class="left">【直供】精选新西兰苹果</view>
+                        <view class="right" style="color:#888888;">× 100</view>
+                    </view>
+                </view>
+            </view>
+            <view class="Statistical">
+                <view>
+                    <text style="color:#888888;">共 </text>
+                    <text style="font-weight: 700;font-size:28rpx;">100 </text>
+                    <text style="color:#888888;">件</text>
+                    <text style="color:#888888;margin-left:20rpx;">实付 </text>
+                    <text style="font-weight: 700;font-size:28rpx;">￥19.85</text>
+                </view>
+            </view>
+            <view class="footer">
+                <van-button round color="#efab3c"  size="small">单色按钮</van-button>
+            </view>
+        </view>
+    </van-tab>
+    <van-tab title="标签 2">内容 2</van-tab>
+    <van-tab title="标签 3">内容 3</van-tab>
+    <van-tab title="标签 4">内容 4</van-tab>
+</van-tabs>

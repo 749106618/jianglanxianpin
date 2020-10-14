@@ -1,0 +1,248 @@
+/* pages/sales/sales.wxss */
+.header{
+  height: 35vh;
+  float: left;
+  width: 100vw;
+  background: url('https://www.wjfresh.com/file/upload/20200611/1591876998006.png') no-repeat;
+  background-size: 100% 100%;
+}
+.backImg{
+  position: absolute;
+  left: 20rpx;
+  top: 60rpx;
+  width: 40rpx;
+
+}
+.hCent{
+  width: 90vw;
+  margin: 0 auto;
+}
+picker{
+  font-size: 29rpx;
+  float: right;
+  padding: 15rpx 30rpx;
+  height: 40rpx;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+  text-align: center;
+  border-radius: 35rpx;
+  color: #fff;
+}
+picker image{
+  width: 15rpx;
+  vertical-align: middle;
+}
+.h1Top{
+  margin-top: 12vh;
+}
+.h1Top>text{
+  color: #fff;
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.h1Bot{
+  color: #fff;
+}
+.conter{
+  width: 93vw;
+  position: absolute;
+  top: 24vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 30rpx;
+}
+.cTop{
+  width: 100%;
+  position: relative;
+}
+
+.junpCode{
+  position: absolute;
+  right: 0;
+  top: 40rpx;
+  background: #ff8832;
+  color: #fff;
+  text-align: center;
+  padding: 0 5rpx 0 20rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border-top-left-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+}
+
+.ctText{
+  display: inline-block;
+  margin: 20rpx 20rpx 0 40rpx;
+}
+
+.ctText text{
+  display: block;
+}
+.ctText1{
+  color: #323232;
+  font-weight: bold;
+  font-size: 38rpx;
+  margin-bottom: 10rpx;
+}
+.ctText2{
+  font-size: 26rpx;
+}
+.ccTop{
+  width: 90vw;
+  margin: 60rpx auto;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.ccTop>image{
+  width: 10rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.ccCont{
+  width: 88vw;
+  margin: 0 auto;
+}
+.ccLi{
+  float: left;
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+.lUser{
+  float: left;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.ldetail{
+  float: left;
+  margin-left: 30rpx;
+}
+.ldetail text{
+  display: block;
+}
+.luName{
+  font-size: 34rpx;
+  color: #333;
+}
+.luTime{
+  color: #999;
+  font-size: 28rpx;
+}
+.junpDetail{
+  color: #333;
+  float: right;
+  margin-top: 20rpx;
+}
+.junpDetail image{
+  width: 10rpx;
+  height: 15rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+
+/* 商户详情 */
+.dDetail{
+  float: left;
+  margin-left: 30rpx;
+  color: #fff;
+}
+.dDetail text{
+  display: block;
+}
+.dName{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.dTel{
+  font-size: 28rpx;
+}
+.deView1 image{
+  width: 10rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.deView1{
+  margin: 30rpx 0 10rpx;
+  color: #666;
+}
+.deView2{
+  display: block;
+  width: 88vw;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.addButton{
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  background: #ff8832;
+  text-align: center;
+  margin: 40rpx auto;
+}
+
+/* 我的邀请二维码 */
+.qrConter{
+  width: 93vw;
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 30rpx;
+}
+.qrTit{
+  line-height: 100rpx;
+  font-weight: bold;
+  color: #333;
+  margin: 40rpx 0;
+}
+.qrUimg{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.qrCode{
+  display: block;
+  margin: 0 auto;
+  width: 350rpx;
+  height: 350rpx;
+}
+.solide{
+  width: 100%;
+  margin: 80rpx 0;
+}
+.iCode text:first-child{
+  color: #666;
+  font-size: 30rpx;
+}
+.iCode text:last-child{
+  margin-left: 20rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.icon{
+  display: flex;
+  color: #666;
+  font-size: 28rpx;
+  margin-top: 40rpx;
+}
+.icon view{
+  flex: 1;
+}
+
+.icon image{
+  width: 70rpx;
+  height: 70rpx;
+  display: block;
+  margin: 20rpx auto;
+}

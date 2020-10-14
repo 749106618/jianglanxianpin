@@ -1,0 +1,83 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.3",
+	"appid": "wx39bc7e2804bfb812",
+	"projectname": "%E6%B1%9F%E5%8D%97%E9%B2%9C%E5%93%81",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/user_index/user_index",
+					"pathName": "pages/user_index/user_index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/get_phone/get_phone",
+					"pathName": "pages/get_phone/get_phone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "scene=74242178",
+					"scene": 1011
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,16 @@
+<!--pages/text1/text1.wxml-->
+<text class="txt">湖南延泰农业科技有限公司深耕水果行业，扎根湖南，服务全国.</text>
+<text class="txt">延泰农业凭借着在传统果品销售流通领域的多年沉淀，借助领先行业的科学选种、选品的优良技术；依托成熟、丰富、专业的果品储存、流通技术和运营模式；并在全国各地设立多个仓储分拣物流中心，组建高效的物流供应链网络.</text>
+<text class="txt">延泰农业将开放自身流通服务技术优势，结合互联网数据驱动新零售，以“大数据+零售”的全新模式，使供应链、营销、仓储与配送高度智能化成为延泰农业的数据驱动.</text>
+<text class="txt">延泰农业将和社会优质资源携手共享市场红利机会，以“平台化、协同化、公开化”地聚集、复用资源，协同市场机会，从而实现企业发展和社会价值创新的果品销售运营新形态，力争成为中国新零售业态水果细分市场第一企业.</text>
+
+<text class="txtTit">我们的使命  </text>
+<text class="txt">助力生态农业发展，健康乐活每一天</text>
+<text class="txtTit">我们的愿景  </text>
+<text class="txt">成为引领中国果业的科技企业</text>
+<text class="txtTit">我们的水果</text>
+<text class="txt">科技与生态并存、品质为先、农人代言、透明溯源</text>
+<text class="txtTit">我们的果农</text>
+<text class="txt">良心种植、道德采购、科技创富</text>
+<text class="txtTit">我们的伙伴</text>
+<text class="txt">匠人精神、诚实守信、专业精通、体贴关怀、全心投入</text>

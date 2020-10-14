@@ -1,0 +1,428 @@
+/**index.wxss**/
+.header{
+  line-height:50rpx; 
+  height: 60rpx;
+}
+
+.header image{
+  vertical-align: middle;
+}
+
+.hLeft{
+  float: right;
+  display: inline-block;
+}
+
+.hLeft image{
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.hRigh{
+  float: right;
+  width: 15vw;
+  text-align: center;
+}
+
+.hRigh image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.ss{
+  display: inline-block;
+  background: #f1f1f1;
+  border-radius: 10rpx;
+  width: 70vw;
+  text-align: center;
+  color: #aaa;
+  font-size: 25rpx;
+}
+
+.userAddress{
+  float: left;
+  display: inline-block;
+  text-align: center;
+  width: 13vw;
+  padding: 0 1vw;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.tab{
+  width: 100vw;
+  display: flex;
+}
+
+.tabLi{
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.active{
+  font-weight: bold;
+  position: relative;
+}
+
+.active::after{
+  content:'';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  margin: auto;
+  height: 10rpx;
+  width: 40%;
+  border-radius: 10rpx;
+  background: #fda800;
+}
+
+swiper{
+  height: 332rpx;
+}
+
+swiper image{
+  width: 100vw;
+}
+
+.vTab{
+  width: 100vw;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.swiperDown{
+  width: 93vw;
+margin-left: 3.5vw;
+
+}
+
+.vTabli{
+  width: 25vw;
+  float: left;
+  font-size: 25rpx;
+  margin-top: 20rpx;
+}
+
+.vTabli text{
+  display: inline-block;
+  width: 20vw;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  margin-top: 10rpx;
+}
+
+.vTabimg{
+  width: 90rpx;
+  height: 90rpx;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+
+.notice{
+  float: left;
+  margin: 20rpx 4vw;
+  width: 92vw;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  background: #feedcf;
+  color: #f56606;
+  border-radius: 10rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.notice image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin: 0 10rpx;
+}
+
+.noticeDetail{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 600rpx;
+  height: 700rpx;
+  z-index: 3;
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+.nOver{
+  width: 100%;
+  height: 400rpx;
+  overflow: auto;
+}
+
+.jian{
+  position: relative;
+  width: 600rpx;
+  height: 700rpx;
+}
+
+.hiedNotice{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-top: 2rpx solid #ebebeb;
+  color: #fda800
+}
+
+.zhe{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2
+}
+
+.noticeDetail image{
+  width: 100%
+}
+
+.noticeDetail text{
+  display: block;
+  padding: 0 30rpx;
+  color: #353535;
+}
+
+#nTit{
+  text-align: center;
+  font-weight: bold;
+  padding: 20rpx 0;
+}
+
+.xTime{
+  float: left;
+  margin-top:40rpx; 
+}
+
+.xTime text{
+  display: block;
+  margin: 0 4vw;
+  width: 92vw;
+}
+
+.xTime text:first-child{
+  font-size: 37rpx;
+  color: #332500;
+  font-weight: bold;
+}
+
+.xTime text:last-child{
+  font-size: 28rpx;
+  color: #5c5133
+}
+
+.xstop{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 150rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+
+.xTime1{
+  float: left;
+  margin: 20rpx 0 0 4vw;
+  width: 96vw;
+  height: 380rpx;
+  /* background: red; */
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.xwith{
+  width: 100vw;
+  display: flex;
+}
+
+.xshop{
+  width: 250rpx;
+  margin-right: 20rpx;
+  position: relative;
+}
+
+.xsImg{
+  position: relative;
+}
+
+.xsImg2{
+  float: left;
+  position: relative;
+}
+
+.xshop text {
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.xshopimg{
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 20rpx;
+}
+
+.xshopimg2{
+  width: 30vw;
+  height: 30vw;
+  border-radius: 20rpx;
+}
+
+.xshop2{
+  float: left;
+}
+
+.xshoptit{
+  color: #322502;
+  font-size: 30rpx;
+}
+
+.xshopcont{
+  color: #999999;
+  font-size:26rpx; 
+}
+
+.xshopric{
+  color: #ffaa01;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.xshopnone{
+  color: #2c2512;
+  font-size: 28rpx;
+}
+
+.xwith2{
+  width: 30vw;
+  float: left;
+  margin-left:2.5vw; 
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.addCart{
+  float: right;
+  width: 30rpx;
+}
+
+/* 瀑布流最外层 */
+#root {
+  margin: 20rpx 2vw;
+  width: 96vw;
+  column-count: 2;
+  column-width: 46vw;
+  column-gap: 1vw;
+  float: left;
+}
+
+#root text{
+  display: block;
+}
+
+/* 每一列图片包含层 */
+.rItem {
+  position: relative;
+  margin-bottom: 10px;
+  /* 防止多列布局，分页媒体和多区域上下文中的意外中断 */
+  break-inside: avoid;
+  background: #fff;
+  margin-left: 1vw;
+}
+
+.rItemImg{
+  width: 46vw;
+  border-radius: 20rpx;
+}
+
+.rtext1{
+  width: 46vw;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  color: #332500;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.addCartImg,.addCart{
+  width: 30rpx;
+  position: absolute;
+  bottom: 0rpx;
+  right: 10rpx;
+}
+.xshopric2{
+  display: block;
+  font-size: 26rpx;
+  width: 24vw;
+  color: #ffaa01;
+  font-weight: bold;
+}
+#cardDh{
+  position: fixed;
+  transition: left 1s linear, top 1s ease-in;
+  width: 30rpx;
+  left:-30rpx;
+}
+
+.xshoptit2{
+display: block;
+width: 100%;
+overflow: hidden;
+}
+
+
+.dj{
+  width: 93vw;
+  margin-left: 3.5vw;
+}
+.juan{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  line-height: 100vh;
+  /* filter: blur(8px); */
+  background: rgba(0, 0, 0, 0.5)
+}
+.juanImg{
+  width: 500rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto
+}

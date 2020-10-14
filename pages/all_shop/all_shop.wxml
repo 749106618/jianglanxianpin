@@ -1,0 +1,48 @@
+<!--pages/all_shop/all_shop.wxml-->
+<scroll-view scroll-x='true' class="x" scroll-into-view='{{pj}}' scroll-with-animation='true'>
+<!-- scroll-into-view -->
+  <view class="xwidth">
+    <view class="xtext {{goodsId == item.id ? 'xActive' : ''}}" id='pj{{index}}' data-isclick="{{goodsId == item.id ? '1' : '2'}}"  wx:for="{{styles}}" wx:key="{{index}}" data-id="{{item.id}}" data-index='{{index}}' bindtap="getTypeByStyle">{{item.name}}</view>
+  </view>
+</scroll-view>
+<image class="xright" bindtap="xshow" src="../img/w.jpg" mode="widthFix"></image>
+
+
+<!-- 全部分类 -->
+<view class="xhide" wx:if='{{xhide==1}}'>
+  <view class="xhTop">
+    <text>全部分类</text>
+    <image src="../img/w.png" mode="widthFix" class="xright"></image>
+  </view>
+  <view class="xhbot">
+    <view class="xhbText {{goodsId == item.id ? 'xhbActive' : ''}}" data-isclick="{{goodsId == item.id ? '1' : '2'}}"  wx:for="{{styles}}" wx:key="{{index}}" data-id="{{item.id}}" data-index='{{index}}' bindtap="getTypeByStyle">{{item.name}}</view>
+  </view>
+</view>
+<view class="zhe" bindtap="xhide" wx:if='{{xhide==1}}'></view>
+
+<view class="cent">
+  <!-- y轴 -->
+  <view class="y">  
+    <text id="{{goodsIdY == item.id ? 'cActive' : ''}}" data-isclick="{{goodsIdY == item.id ? '1' : '2'}}" wx:for="{{stylesY}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="getGoodsByType">{{item.name}}</text>
+  </view>
+  <!-- 商品 -->
+  <view class="center">
+    <!-- 单个商品 -->
+    <view class="shop" wx:for="{{Goods}}" wx:key='{{index}}' bindtap="junpDetails" data-id="{{item.id}}">
+      <view class="shop_left">
+        <image src="{{imgHeader}}{{item.indexImg}}"></image>
+        <view class="xstop" wx:if='{{item.inventoryNum<=0}}'>已售停</view>
+      </view>
+      <view class="shop_righ">
+        <text class="o shopTit">{{item.goodsTitle}}</text>
+        <text class="o shopcent">{{item.goodsDescribe}}</text>
+        <view class="sshop">
+          <image src="https://www.wjfresh.com/file/upload/20200413/1586760969214.png" class="add_cart" data-id="{{item.id}}" catchtap="addCard"></image>
+          <text class="ssrmb">¥</text>
+          <text class="sspric">{{item.price}}</text>
+          <text class="sswidth">{{item.unit}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,134 @@
+<!--index.wxml-->
+<!-- 头部 -->
+<!-- <view class="header">
+  <view class="hRigh">
+    <image src='https://www.wjfresh.com/file/upload/20191209/1575857235272.png' class=""></image>
+  </view>
+  <view class="hLeft">
+    <text class="userAddress">长沙长沙长沙</text>
+    <view class="ss">
+      <image src="https://www.wjfresh.com/file/upload/20191209/1575857217753.png" class=""></image>
+      <text>请输入您想要采购的商品</text>
+    </view>
+  </view>
+</view> -->
+
+<!-- tab切换 -->
+<!-- <view class="tab">
+  <view class="tabLi {{view==true ? 'active' : ''}}" bindtap="tabView" data-id="true">长沙好货</view>
+  <view class="tabLi {{view==false ? 'active' : ''}}" bindtap="tabView" data-id="false">广州好货</view>
+</view> -->
+
+<!-- 长沙好货 -->
+<view class="view1" wx:if='{{view}}'>
+  <!-- 轮播 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+    <block wx:for="{{dataList.indexImg}}" wx:key="{{index}}">
+      <swiper-item>
+        <image bindtap="junpUrl" data-caption='{{item.href}}' src='{{imgHeader}}{{item.imgUrl}}' mode="widthFix"></image>
+        <!-- <view class="swiper-item {{item}}"></view> -->
+      </swiper-item>
+    </block>
+  </swiper>
+  <image src="https://www.wjfresh.com//file/upload/sgjupload/2020/03/27/d901b36822aa661bfaf8110dcb128fee.jpg" class="swiperDown" mode="widthFix"></image>
+  <!-- 导航栏 -->
+  <view class="view1Tab">
+    <view class="vTab">
+      <view class="vTabli" bindtap="junpAllIndex" data-index='{{index}}' data-x='{{item.id}}' wx:for='{{styleList}}' wx:key='{{index}}'>
+        <image src="{{imgHeader}}{{item.imageUrl}}" class="vTabimg"></image>
+        <text>{{item.name}}</text>
+      </view>
+      <view class="vTabli" bindtap="junpAll">
+        <image src="../img/more.png" class="vTabimg"></image>
+        <text>更多分类</text>
+      </view>
+    </view>
+  </view>
+  <!-- 公告 -->  
+  <!-- <view class="notice" bindtap="notice" data-id='true'>
+    <image src="https://www.wjfresh.com/file/upload/20191216/1576475066829.png" class=""></image>
+    <text>【重要】广州货源商品配送时间调整</text>
+  </view>
+  <view class="noticeDetail" wx:if='{{notice}}'>
+    <view class="jian">
+      <image src="http://wxt.blzaixian.com/file/upload/20191216/1576476841590.png" mode='widthFix'></image>
+      <view class="nOver">
+        <text id="nTit">= 配送公告 =</text>
+        <text>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</text>
+        <text>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</text>
+        <text>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</text>
+        <text>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</text>
+        <text>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</text>
+        <text>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</text>
+        <text>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</text>
+      </view>
+      <view class="hiedNotice" bindtap="notice" data-id='false'>我知道了</view>
+    </view>
+  </view> -->
+  <view class="zhe" wx:if='{{notice}}'></view>
+  <view>
+    <view wx:for='{{dataList.tmpList}}' wx:key='{{index}}'>
+      <!-- 标题 -->
+      <view class="xTime" wx:if='{{item.goodsInfos.length !=0}}'>
+        <text wx:if='{{item.img==undefined}}'>{{item.name}}</text>
+      <image class="dj" wx:if='{{item.img!=undefined}}' bindtap="junpUrl" data-caption='{{item.url}}' src="{{imgHeader}}{{item.img}}" mode="widthFix"></image>
+        <!-- <text>新柜靓货，超值抢购</text> -->
+      </view>
+      <!-- 超出部分隐藏 -->
+      <view class="xTime1" wx:if='{{item.type==1&&item.goodsInfos.length !=0}}'>
+        <view class="xwith">
+          <!-- 单个商品 -->
+          <view class="xshop" wx:for='{{item.goodsInfos}}' wx:key='{{index1}}' data-x='{{item.style}}' data-y='{{item.type}}' bindtap="junpDetails" data-id='{{item.id}}'>
+            <view class="xsImg">
+              <image src="{{imgHeader}}{{item.indexImg}}" class="xshopimg"></image>
+              <view class="xstop" wx:if='{{item.state==1}}'>已售停</view>
+            </view>
+            <text class="xshoptit">{{item.goodsTitle}}</text>
+            <text class="xshopcont">{{item.goodsDescribe}}</text>
+            <text class="xshopric">¥{{item.price}}/{{item.unit}}</text>
+            <image src="https://www.wjfresh.com/file/upload/20200413/1586760969214.png" mode="widthFix" catchtap="addCart" data-id='{{item.id}}' class="addCartImg"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 九宫格 -->
+      <view class="xTime2" wx:if='{{item.type==3&&item.goodsInfos.length !=0}}'>
+        <view class="xshop2">
+          <!-- 单个商品 -->
+          <view class="xwith2" wx:for='{{item.goodsInfos}}' wx:key='{{index1}}' data-x='{{item.style}}' data-y='{{item.type}}' bindtap="junpDetails" data-id='{{item.id}}'>
+            <view class="xsImg2">
+              <image src="{{imgHeader}}{{item.indexImg}}" class="xshopimg2"></image>
+              <view class="xstop" wx:if='{{item.state==1}}'>已售停</view>
+            </view>
+            <text class="xshoptit2 ov">{{item.goodsTitle}}</text>
+            <text class="xshopric2 ov">¥{{item.price}}/{{item.unit}}</text>
+            <image src="https://www.wjfresh.com/file/upload/20200413/1586760969214.png" mode="widthFix" class="addCart" catchtap="addCart" data-id='{{item.id}}'></image>
+          </view>
+        </view>
+      </view>
+      <!-- 瀑布流 -->
+      <view id="root" wx:if='{{item.type==4&&item.goodsInfos.length !=0}}'>
+        <!-- 单个商品 -->
+        <view class="rItem" wx:for='{{item.goodsInfos}}' wx:key='{{index1}}' data-x='{{item.style}}' data-y='{{item.type}}' bindtap="junpDetails" data-id='{{item.id}}'>
+          <view>
+            <image src="{{imgHeader}}{{item.indexImg}}" mode="widthFix" class="rItemImg"></image>
+            <view class="xstop" wx:if='{{item.state==1}}'>已售停</view>
+          </view>
+          <text class="rtext1">{{item.goodsDescribe}}</text>
+          <text class="xshopcont">{{item.goodsTitle}}{{item.unit}}</text>
+          <text class="xshopric">¥{{item.price}}</text>
+          <image src="https://www.wjfresh.com/file/upload/20200413/1586760969214.png" mode="widthFix" class="addCart" catchtap="addCart" data-id='{{item.id}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 广州好货 -->
+<view class="view2" wx:if='{{view==false}}'>
+  <view class="">
+
+  </view>
+</view>
+
+<view class="juan" bindtap="juan" wx:if='{{popupWindow && isReceivedCoupon==false}}'></view>
+<image src="{{dataList.popupWindowImg}}" wx:if='{{popupWindow && isReceivedCoupon==false}}' mode="widthFix" class="juanImg" bindtap="junpSplist"></image>

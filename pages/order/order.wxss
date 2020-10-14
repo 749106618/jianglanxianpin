@@ -1,0 +1,56 @@
+page {
+  background-color: #ededed;
+}
+.card {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  margin: 20rpx;
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-top .card-top-left {
+  color: #000;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.card-top .card-top-right {
+  color: #efab3c;
+  font-size: 30rpx;
+}
+.card .miadd {
+  margin-top: 10rpx;
+  color: #888888;
+  font-size: 30rpx;
+}
+.card .bottom {
+  display: flex;
+  margin-top: 40rpx;
+}
+.card .bottom image {
+  width: 25%;
+  height: 167.5rpx;
+}
+.card .bottom .bottom-info {
+  width: 75%;
+  font-size: 32rpx;
+  color: #000;
+}
+.card .bottom .bottom-info .bottom-info-item {
+  display: flex;
+  justify-content: space-between;
+}
+.card .Statistical{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 20rpx;
+}
+.card .footer {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 30rpx;
+}

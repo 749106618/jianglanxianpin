@@ -1,0 +1,2 @@
+/* pages/sales_detail/sales_detail.wxss */
+@import"../sales/sales.wxss";

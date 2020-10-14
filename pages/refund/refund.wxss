@@ -1,0 +1,113 @@
+/* pages/refund/refund.wxss */
+.headerImg{
+  width: 100vw;
+}
+
+page{
+  background: #f9f8f8
+}
+
+.cent{
+  width: 100vw;
+  height: 93vh;
+  overflow: auto;
+  border-bottom-left-radius: 100rpx;
+  border-bottom-right-radius: 100rpx;
+  position: fixed;
+  top: 0;
+  background: #f9f8f8;
+  z-index: 2;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 14vh;
+  line-height: 20vh;
+  background-image: linear-gradient(315deg, #fead37, #ffd85c);
+  text-align: center;
+  color: #fff;
+  font-size: 35rpx;
+}
+
+.form{
+  width: 570rpx;
+  margin: 0 auto;
+}
+
+.li text{
+  display: block;
+}
+
+.li{
+  position: relative;
+  padding: 20rpx 20rpx;
+}
+
+.li:first-child{
+  margin-top: 0;
+}
+
+.ltit{
+  color: #575757;
+  font-size: 26rpx;
+}
+
+.lcent{
+  color: #252525;
+  font-size: 30rpx;
+}
+
+radio{
+  display: block;
+  font-size: 28rpx;
+  margin: 10rpx 0;
+}
+ 
+radio .wx-radio-input{
+  border-radius: 50%; 
+  width: 30rpx;
+  height: 30rpx;
+}
+
+radio .wx-radio-input.wx-radio-input-checked{
+  border: 2rpx solid #ffad29;
+   background: #fff;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before{
+  background: #ffad29;
+  border-radius: 50%;
+  width: 30rpx; 
+  height: 30rpx;
+  color: #ffad29;
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 10rpx;
+}
+
+.yellow{
+  color: #ffad29;
+}
+
+.refundImg{
+  width: 21vw;
+  height: 21vw;
+  margin: 40rpx 3vw 0 0;
+}
+
+.refundImg:last-child{
+  margin: 40rpx 0 0 0 ;
+}
+
+#active{
+  box-shadow: 0 0 10rpx #ececec;
+  border-radius: 50rpx;
+}
+
+.removeImg{
+  width: 40rpx;
+  position: absolute;
+  left: 22vw;
+  top: 71rpx;
+}

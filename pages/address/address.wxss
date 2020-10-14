@@ -1,0 +1,50 @@
+/* pages/address/address.wxss */
+page{
+    background-color: #f1f1f1;
+}
+.add-button{
+    width: 700rpx;
+    margin-bottom: 44rpx;
+    position: absolute;
+    left: 25rpx;
+    bottom: 0;
+}
+.tip{
+    margin-top: 300rpx;
+    margin-bottom: 100rpx;
+    text-align: center;
+    font-size: 30rpx;
+}
+.address-crad{
+    font-size: 24rpx;
+    padding: 20rpx 40rpx;
+    background-color: #fff;
+    position: relative;
+    border-top: 2rpx solid #f1f1f1;
+}
+.address-crad .name{
+    font-weight: 700;
+}
+.address-crad .phone{
+    font-weight: 700;
+    margin-left: 10rpx;
+}
+.address-crad .label{
+    margin-left: 10rpx;
+    background-color: green;
+    border-radius: 6rpx;
+    padding: 0rpx 6rpx;
+    color: #fff;
+    font-size: 20rpx;
+}
+.address-crad .bottom{
+    margin-top: 10rpx;
+}
+.address-crad .top-right{
+    font-size: 26rpx;
+    color: grey;
+    position: absolute;
+    top: 20rpx;
+    right: 40rpx;
+    height: 80rpx;
+}

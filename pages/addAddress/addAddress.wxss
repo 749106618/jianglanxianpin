@@ -1,0 +1,8 @@
+/* pages/addAddress/addAddress.wxss */
+page{
+    background-color: #f1f1f1;
+}
+.add-button{
+    width: 700rpx;
+    margin: 44rpx auto;
+}

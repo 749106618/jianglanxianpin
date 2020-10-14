@@ -1,0 +1,18 @@
+<!-- pages/addAddress/addAddress.wxml -->
+<van-cell-group>
+  <van-field value="{{ username }}" data-type="username" clearable label="联系姓名" placeholder="请输入联系姓名" bind:change="onChange" />
+  <van-field value="{{ phone }}" data-type="phone" type="number" label="联系电话" clearable placeholder="请输入联系电话" bind:change="onChange" />
+  <van-cell title="收货地址" data-type="selectArea" is-link value="{{selectArea}}" bind:click="showPopup" />
+  <van-field value="{{ addressDetail }}" data-type="addressDetail" type="textarea" label="详细地址" clearable autosize placeholder="请输入详细地址" bind:change="onChange" />
+  <van-cell title="默认地址" clickable bind:click="ischeck">
+  <van-icon slot="right-icon" name="{{isDefualtAdd==0?'passed':'checked'}}" class="custom-icon" />
+  </van-cell>
+</van-cell-group>
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 50%">
+  <van-area area-list="{{ areaList }}"  value="430102" bind:confirm="onConfirm" bind:cancel="onCancel" />
+</van-popup>
+<view class="add-button">
+  <van-button type="warning" bind:click="subimt" block round color="#ff7f00" custom-style="color:black;">
+    保存
+  </van-button>
+</view>

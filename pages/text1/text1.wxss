@@ -1,0 +1,2 @@
+/* pages/text1/text1.wxss */
+@import"../text/text.wxss";

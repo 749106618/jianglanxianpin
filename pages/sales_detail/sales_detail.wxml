@@ -1,0 +1,37 @@
+<!--pages/sales_detail/sales_detail.wxml-->
+<view class="header">
+<image class="backImg" mode="widthFix" bindtap="back" src="{{imgHeader}}/file/upload/20200615/1592181007833.png"></image>
+  <view class="hCent">
+    <view class="h1Top">
+      <image class="lUser" src="{{dataList.userImg}}"></image>
+      <view class="dDetail">
+        <text class="dName">{{dataList.companyInfo.name}}</text>
+        <text class="dTel">{{dataList.companyInfo.tel}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="conter">
+  <view class="ccCont">
+    <view class="deView1">
+      <image mode="widthFix" src="{{imgHeader}}/file/upload/20200612/1591924827578.png"></image>
+      <text>店主姓名</text>
+    </view>
+    <view class="deView2 ov">{{dataList.companyInfo.liaisonPerson}}</view>
+    <view class="deView1">
+      <image mode="widthFix" src="{{imgHeader}}/file/upload/20200612/1591924827578.png"></image>
+      <text>店铺地址</text>
+    </view>
+    <view class="deView2 ov">{{dataList.companyInfo.address}}</view>
+    <view class="deView1">
+        <image mode="widthFix" src="{{imgHeader}}/file/upload/20200612/1591924827578.png"></image>
+        <text>下单金额</text>
+      </view>
+      <view class="deView2 ov">{{dataList.consumAmount}}</view>
+    <view class="deView1">
+      <image mode="widthFix" src="{{imgHeader}}/file/upload/20200612/1591924827578.png"></image>
+      <text>下单次数</text>
+    </view>
+    <view class="deView2 ov">{{dataList.orderCount}}</view>
+  </view>
+</view>

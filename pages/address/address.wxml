@@ -1,0 +1,18 @@
+
+<view class="container">
+    <!-- 没有添加收货地址状态 -->
+    <view class="tip" wx:if="{{!isAddress}}">您还没有收获地址哦，赶紧添加一个吧</view>
+    <!-- 有收货地址状态 -->
+    <view class="address-crad" wx:for='{{addList}}' wx:key='index' data-index='{{index}}' bindtap="junpEditAddress1" wx:if="{{isAddress}}">
+        <view class="top">
+            <text class="name">{{item.consignee}}</text>
+            <text class="phone">{{item.phone}}</text>
+            <text class="label" wx:if='{{item.isDefault==true}}'>默认</text>
+        </view>
+        <view class="bottom">{{item.area}} {{item.address}}</view>
+        <view class="top-right" catchtap="editaddress" data-index='{{index}}'>编辑</view>
+    </view>
+    <view class="add-button">
+        <van-button bind:click="junpEditAddress" type="warning" block round color="#ff7f00" custom-style="color:black;">添加收货地址</van-button>
+    </view>    
+</view>

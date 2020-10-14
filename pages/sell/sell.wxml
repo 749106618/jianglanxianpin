@@ -1,0 +1,42 @@
+<van-tabs animated color="#312506" sticky>
+    <van-tab title="售后申请">
+        <view class="card" wx:for='{{dataList1}}' bindtap="junpReund" data-id='{{item.id}}' wx:key='index'>
+            <view class="card-top">
+                <view class="card-left">售后单号：{{item.id}}</view>
+                <view class="card-right">
+                    <text style="margin-right:10rpx;">可申请</text>
+                    <van-icon name="arrow" />
+                    <!-- <image class="" src="" /> -->
+                </view>
+            </view>
+            <view class="card-bottom" wx:for='{{item.orderItems}}' wx:for-item="items" wx:key='index'>
+                <image class="img2" src="{{imgHeader}}{{items.thumbnail}}" />
+                <view>{{items.name}} {{items.goodsInfo.unit}}</view>
+            </view>
+            <view class="box"></view>
+        </view>
+        <view class="noCard" wx:if="{{!showCard}}">
+            <view class="tip">没有可进行售后的订单</view>
+        </view>
+    </van-tab>
+    <van-tab title="售后记录">
+        <view class="card" wx:for='{{dataList2}}' bindtap="junpOrder" data-id='{{item.id}}' wx:key='index'>
+            <view class="card-top">
+                <view class="card-left">售后单号：{{item.id}}</view>
+                <view class="card-right">
+                    <text style="margin-right:10rpx;">{{item.shippingStatus=='shipped'?'售后中':'已完成'}}</text>
+                    <van-icon name="arrow" />
+                    <!-- <image class="" src="" /> -->
+                </view>
+            </view>
+            <view class="card-bottom" wx:for='{{item.orderItems}}' wx:for-item="items" wx:key='index'>
+                <image class="img2" src="{{imgHeader}}{{items.thumbnail}}" mode="widthFix" />
+                <view>{{items.name}} {{items.goodsInfo.unit}}</view>
+            </view>
+            <view class="box"></view>
+        </view>
+        <view class="noCard" wx:if="{{!showCard1}}">
+            <view class="tip">没有可进行售后的订单</view>
+        </view>
+    </van-tab>
+</van-tabs>

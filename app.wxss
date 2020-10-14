@@ -1,0 +1,19 @@
+/**app.wxss**/
+.bPjh1{
+  float: left;
+  width: 100vw;
+  height: 20rpx;
+  background: #f2f1ed
+}
+.ov{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.ov2{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

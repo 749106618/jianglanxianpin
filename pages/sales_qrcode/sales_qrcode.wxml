@@ -1,0 +1,27 @@
+<!--pages/sales_qrcode/sales_qrcode.wxml-->
+<view class="header">
+<image class="backImg" mode="widthFix" bindtap="back" src="{{imgHeader}}/file/upload/20200615/1592181007833.png"></image>
+</view>
+<view class="qrConter">
+  <view class="qrTit">
+    <view class="class='qrUimg'"><open-data type="userAvatarUrl"></open-data></view>
+    <open-data class='qrUname' type='userNickName' lang="zh_CN"></open-data>
+    <text>的邀请小程序码</text>
+  </view>
+  <!-- 小程序码 -->
+  <image class="qrCode" src="{{imgHeader}}{{qrcode}}"></image>
+  <image class="solide" mode="widthFix" src="{{imgHeader}}/file/upload/20200613/1592030599631.png"></image>
+  <view class="iCode">
+    <text>邀请码:</text>
+    <text>{{options.inviteCode}}</text>
+  </view>
+  <view class="icon">
+    <view bindtap="saveImg">
+      <image src="{{imgHeader}}/file/upload/20200613/1592031290989.png"></image>
+      <text>保存二维码</text>
+    </view>
+    <!-- <view>
+      <button open-type='share' hover-class="none"><image src="{{imgHeader}}/file/upload/20200613/1592031302268.png" mode="widthFix" class="shareImg"></image>微信</button>
+    </view> -->
+  </view>
+</view>

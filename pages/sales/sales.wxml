@@ -1,0 +1,58 @@
+<!--pages/sales/sales.wxml-->
+<view class="header">
+  <image class="backImg" mode="widthFix" bindtap="back" src="{{imgHeader}}/file/upload/20200615/1592181007833.png"></image>
+  <view class="hCent">
+    <view class="h1Top">
+      <text>{{dataList.monthAmount}}</text>
+      <picker mode="date" fields='month' value="{{date}}" start="{{ym}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+          <image src="{{imgHeader}}/file/upload/20200611/1591888593180.png" mode="widthFix"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="h1Bot">本月邀请总额</view>
+  </view>
+</view>
+<view class="conter">
+  <!-- 业务员业绩 -->
+  <view class="cTop">
+    <view class="ctTop">
+      <view class="ctText">
+        <text class="ctText1">{{dataList.monthCount}}</text>
+        <text class="ctText2">本月邀请商户</text>
+      </view>
+      <view class="ctText">
+        <text class="ctText1">{{dataList.sumCount}}</text>
+        <text class="ctText2">累计邀请商户</text>
+      </view>
+    </view>
+    <view class="ctBot">
+      <view class="ctText">
+        <text class="ctText1">{{dataList.sumAmount}}</text>
+        <text class="ctText2">累计邀请总额</text>
+      </view>
+    </view>
+    <view class="junpCode" bindtap="junpQr">我的邀请二维码</view>
+  </view>
+  <!-- 我邀请的商户 -->
+  <view class="cCon">
+    <view class="ccTop">
+      <image src="{{imgHeader}}/file/upload/20200612/1591924827578.png" mode="widthFix"></image>
+      <text>我邀请的商户</text>
+    </view>
+    <view class="ccCont">
+      <view class="ccLi" wx:for='{{dataList.inviteUsers}}' wx:key='index' bindtap="junpDetail" data-id='{{item.userId}}'>
+        <image class="lUser" src="{{item.userImgAddress}}"></image>
+        <view class="ldetail">
+          <text class="luName">{{item.nickName}}</text>
+          <text class="luTime">{{item.createDate}}</text>
+        </view>
+        <view class="junpDetail">
+          <text>查看详情</text>
+          <image src="../img/gd1_2.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

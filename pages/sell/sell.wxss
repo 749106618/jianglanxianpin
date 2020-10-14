@@ -1,0 +1,65 @@
+.noCard {
+  margin-top: 300rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.noCard image {
+  width: 80rpx;
+  height: 100rpx;
+}
+
+.noCard .tip {
+    color: #979281;
+    margin-top: 25rpx;
+}
+
+.card{
+  margin-bottom: 20rpx;
+}
+.card-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+  padding: 0 40rpx;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.card-top .card-left{
+  color: #000000;
+  font-size: 28rpx;
+}
+.card-top .card-right{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  color: #999999;
+  font-size: 30rpx;
+  width: 155rpx;
+}
+.card-bottom{
+  padding: 20rpx 40rpx 5rpx 40rpx;
+  height: 300rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-bottom image{
+  width: 220rpx;
+}
+
+.card-bottom view{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #312506;
+  font-size: 36rpx;
+}
+.card .box{
+  height: 20rpx;
+  background-color: #e6e6e6;
+}

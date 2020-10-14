@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<image src="https://www.wjfresh.com/file/upload/20200414/1586844311644.png" mode="widthFix"></image>
+<view class="cent">
+  <view class="po">
+    <input bindinput="setinput" data-type="tel" placeholder="请输入手机号码" type="number"></input>
+    <button catchtap="sendCode" disabled="{{smsFlag}}">{{sendTime}}</button>
+  </view>
+  <input bindinput="setinput" data-type="code" placeholder="验证码"></input>
+  <button class="button" open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="submit">手机号登录</button>
+</view>
+<view class="junptext" bindtap="junptext">
+  <text>点击登录表明我同意</text>
+  <text class="text">果铺联采服务条款</text>
+</view>

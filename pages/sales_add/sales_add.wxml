@@ -1,0 +1,39 @@
+<!--pages/sales_add/sales_add.wxml-->
+<view class="header">
+<image class="backImg" mode="widthFix" bindtap="back" src="{{imgHeader}}/file/upload/20200615/1592181007833.png"></image>
+  <view class="hCent">
+    <view class="h1Top">
+      <view class="lUser">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="dDetail">
+        <open-data class='dName' type='userNickName' lang="zh_CN"></open-data>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="conter">
+  <view class="ccCont">
+    <view class="deView1">
+      <image mode="widthFix" src="{{imgHeader}}/file/upload/20200612/1591924827578.png"></image>
+      <text>店铺名称</text>
+    </view>
+    <input class="deView2 ov" bindinput="setinput" data-type='companyName' placeholder="请输入店铺名称"></input>
+    <view class="deView1">
+      <image mode="widthFix" src="{{imgHeader}}/file/upload/20200612/1591924827578.png"></image>
+      <text>店主名称</text>
+    </view>
+    <input class="deView2 ov" bindinput="setinput" data-type='name' placeholder="请输入店主名称"></input>
+    <view class="deView1">
+      <image mode="widthFix" src="{{imgHeader}}/file/upload/20200612/1591924827578.png"></image>
+      <text>店铺地址</text>
+    </view>
+    <input class="deView2 ov" bindinput="setinput" data-type='address' placeholder="请输入店铺地址"></input>
+    <view class="deView1">
+      <image mode="widthFix" src="{{imgHeader}}/file/upload/20200612/1591924827578.png"></image>
+      <text>邀请码</text>
+    </view>
+    <input class="deView2 ov" bindinput="setinput" data-type='inviteCode' value="{{inviteCode}}" placeholder="请输入邀请码"></input>
+    <view class="addButton" bindtap="subimt">确认</view>
+  </view>
+</view>
